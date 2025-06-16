@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <main class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white p-8 rounded-xl shadow-xl w-full max-w-md">
+
+            <h1 class="text-3xl font-extrabold text-gray-800 text-center mb-8">Conversor de Moedas</h1>
+
+            <form id="converterForm">
+                <div class="mb-5">
+                    <label for="valorDe" class="block text-gray-700 text-sm font-semibold mb-2">Converter de:</label>
+                    <select id="valorDe" name="valorDe"
+                            class="block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out">
+                        <option value="BRL">BRL - Real Brasileiro</option>
+                        <option value="USD" selected>USD - Dólar Americano</option>
+                        </select>
+                </div>
+
+                <div class="mb-5">
+                    <label for="valorPara" class="block text-gray-700 text-sm font-semibold mb-2">Converter para:</label>
+                    <select id="valorPara" name="valorPara"
+                            class="block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out">
+                        <option value="USD">USD - Dólar Americano</option>
+                        <option value="BRL" selected>BRL - Real Brasileiro</option>
+                        </select>
+                </div>
+
+                <div class="mb-6">
+                    <label for="valorMoeda" class="block text-gray-700 text-sm font-semibold mb-2">Valor:</label>
+                    <input type="number" id="valorMoeda" name="valorMoeda" placeholder="Ex: 100.00"
+                           class="block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out"
+                           min="0" step="0.01" >
+                </div>
+
+                <button type="submit"
+                        class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300 ease-in-out">
+                    Converter
+                </button>
+            </form>
+            
+            <div id="erro" class="text-center mt-8 p-4 bg-red-50 border-l-4 border-r-4 border-red-400 text-blue-800 rounded-lg hidden">
+                Insira um valor</div>
+            <div id="result" class="text-center mt-8 p-4 bg-blue-50 border-l-4 border-r-4 border-blue-400 text-blue-800 rounded-lg hidden">
+                </div>
+
+        </div>
+    </main>
+    <script src="src/script.js"></script>
+</body>
+</html>
