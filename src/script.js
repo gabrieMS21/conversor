@@ -1,3 +1,4 @@
+
 // Referências principais do DOM
 const form = document.getElementById("converterForm");
 const resultado = document.getElementById("result");
@@ -60,7 +61,7 @@ form.addEventListener("submit", async function(e) {
             valorConvertido = realDollar * valorMoeda;
         }
 
-        resultado.innerHTML = `Valor convertido de <strong>${valorMoeda} ${valorAtualEntrada}</strong> <br> Para <strong>${valorConvertido.toFixed(2)} ${valorAtualSaida}</strong>`;
+        resultado.innerHTML = `Valor convertido de <br> <strong>${valorMoeda} ${valorAtualEntrada}</strong>  Para <strong>${valorConvertido.toFixed(2)} ${valorAtualSaida}</strong>`;
         resultado.innerHTML += `<br><small>Cotação atualizada em: ${dataCotacao}</small>`;
         resultado.classList.remove("hidden");
         valorInput.classList.remove("border-red-900", "border-2");
